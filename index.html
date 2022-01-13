@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>CSS Positions</title>
+</head>
+<body>
+    <header id="header">
+        <strong>CSS Technical Documentation Page</strong>
+    </header>
+    <nav id="navbar">
+        <header>CSS position</header>
+        <ul>
+            <li><a class="nav-link" href="#Position_Static">Position Static</a></li>
+            <li><a class="nav-link" href="#Position_Relative">Position Relative</a></li>
+            <li><a class="nav-link" href="#Position_Absolute">Position Absolute</a></li>
+            <li><a class="nav-link" href="#Position_Fixed">Position Fixed</a></li>
+            <li><a class="nav-link" href="#Position_Sticky">Position Sticky</a></li>
+            <li><a class="nav-link" href="#Useful_Links_and_Sources">Useful links and sources</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Position_Static">
+            <header>Position Static</header>
+            <p>HTML elements are positioned static by default.</p>
+            <p>The element is positioned according to the normal flow of the document, that means that follows other elements in the document flow, as typed in html.</p>
+            <p>Static positioned elements are not affected by the top, bottom, left, right and z-index properties.</p>
+            <code>
+                <pre>
+                    #container {
+                        position: static;
+                    }
+                </pre>
+            </code>
+        </section>
+        <section class="main-section" id="Position_Relative">
+            <header>Position Relative</header>
+            <p>Relative positioning changes the position of the HTML element relative to where it normally would be in document flow if the position is set to static. It is removed from normal document flow, but position in the document flow is still reserved.</p>
+            <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.</p>
+            <code>
+                <pre>
+                    #container {
+                        position: relative;
+                        left: 15px;
+                    }
+                </pre>
+            </code> 
+        </section>
+        <section class="main-section" id="Position_Absolute">
+            <header>Position Absolute</header>
+            <p>An element positioned absolute is relative to the nearest positioned ancestor. If it has no positioned ancestors, it uses the document body, and moves along with page scrolling.</p>
+            <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It can overlap elements</p>
+            <p>Its final position is determined by the values of top, right, bottom, and left.</p>
+            <code>
+                <pre>
+                    #parent-container {
+                        position: relative;
+                    }
+
+                    #child-container {
+                        position: absolute;
+                        top: 50px;
+                    }
+                </pre>
+            </code>
+        </section>
+        <section class="main-section" id="Position_Fixed">
+            <header>Position Fixed</header>
+            <p>The element is removed from the normal document flow. No space is created for the element in the page layout.</p>
+            <p>Stays in the same place when scrolled, therefore fixed position is good for navigation bars.</p>
+            <p> Its final position is determined by the values of top, right, bottom, and left.</p>
+            <code>
+                <pre>
+                    #nav-bar {
+                        position: fixed;
+                        top: 60px;
+                        left: 0px;
+                        z-index: 1;
+                    }
+                </pre>
+            </code>
+        </section>
+        <section class="main-section" id="Position_Sticky">
+            <header>Position Sticky</header>
+            <p>Sticky positioning can be thought of as a hybrid of relative and fixed positioning. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent.</p>
+            <p>A common use for sticky positioning is for the headings in an alphabetized list. The "B" heading will appear just below the items that begin with "A" until they are scrolled offscreen. Rather than sliding offscreen with the rest of the content, the "B" heading will then remain fixed to the top of the viewport until all the "B" items have scrolled offscreen, at which point it will be covered up by the "C" heading, and so on.</p>
+            <p>At least one of top, right, bottom or left must be specified for sticky positioning to work.</p>
+            <p>Not all browsers support sticky positioning. This helps:</p>
+            <code>
+                <pre>
+                    #container {
+                        position: -webkit-sticky;
+                        position: -moz-sticky;
+                        position: -ms-sticky;
+                        position: -o-sticky;
+                        position: sticky;
+                        top: 0px;
+                    }
+                </pre>
+            </code>
+            <p>Click <a href="#" target="_blank">here</a> for an example page of sticky positioning.</p>     
+        </section>
+        <section class="main-section" id="Useful_Links_and_Sources">
+            <header>Useful links and sources</header>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">MDN Web Docs: position</a></li>
+                <li><a href="https://www.w3schools.com/howto/howto_css_sticky_element.asp" target="_blank">W3School: How TO - Sticky Element</a></li>
+                <li><a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank">W3School: CSS Layout - The position Property</a></li>
+                <li><a href="https://developers.google.com/web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit" target="_blank">Google Developers: Stick your landings! position: sticky lands in WebKit</a></li>
+                <li><a href="https://youtu.be/jx5jmI0UlXU" target="_blank">WDS: Learn CSS Position In 9 Minutes</a></li>
+                <li><a href="https://www.tutorialspoint.com/Relative-Positioning-with-CSS" target="_blank">Tutorialspoint: Relative Positioning with CSS</a></li>
+                <li><a href="https://webplatform.github.io/docs/tutorials/absolute_and_fixed_positioning/" target="_blank">Advanced layouts with absolute and fixed positioning</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

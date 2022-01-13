@@ -14,21 +14,25 @@ html, body {
 }
 
 #header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    vertical-align: middle;
     background-color:lightseagreen;
     font-size: 120%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
 #navbar {
     position: fixed;
-    width: fit-content;
-    max-width: 200px;
-    height: auto;
-    margin-top: 50px;
+    width: 200px;
+    height: 100%;
+    margin-top: 60px;
     margin-left: 0px;
     background-color: rgb(201, 209, 218);
-    border-right: 2px solid;
-    border-bottom: 2px solid;
+    box-shadow: 4px 0 4px 0px rgba(0, 0, 0, 0.2);
+    
 }
     
 #navbar header {
@@ -41,10 +45,10 @@ html, body {
 
 #main-doc {
     flex: 1;
+    margin-left: 200px;
+    padding:15px;
     overflow: auto;
     background-color: rgb(160, 163, 167);
-    
-    
 }
 
 .main-section header {

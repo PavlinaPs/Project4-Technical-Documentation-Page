@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -14,12 +17,12 @@ html, body {
 }
 
 #header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 60px;
     text-align: center;
-    vertical-align: middle;
+    padding-top: 7px;
     background-color:lightseagreen;
-    font-size: 120%;
+    font-family: 'Dongle', sans-serif;
+    font-size: 25pt;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     z-index: 2;
 }
@@ -30,35 +33,128 @@ html, body {
     height: 100%;
     margin-top: 60px;
     margin-left: 0px;
-    background-color: rgb(201, 209, 218);
+    background-color: #DEE7E7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80%;
     box-shadow: 4px 0 4px 0px rgba(0, 0, 0, 0.2);
     
 }
     
 #navbar header {
-    font-size: 120%;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 10px;
-    border:2px solid rgb(201, 209, 218);
+    font-size: 180%;
+    font-family: 'Dongle', sans-serif;
+    padding: 10px 0px 0px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid black;
+        
+}
+
+#navbar ul {
+    padding-left: 0px;
+    margin-top: 0;
+}
+
+#navbar li {
+    list-style-type: none;
+    border-bottom: 1px solid black;
+}
+
+#navbar a:link, a:visited {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 10px 0px 10px 20px;
+    display: block;
+    
+}
+
+#navbar a:hover, a:active {
+    background-color: black;
+    color: white;
+    
+    
 }
 
 #main-doc {
     flex: 1;
     margin-left: 200px;
-    padding:15px;
+    padding: 8px 15px 15px 15px;
     overflow: auto;
-    background-color: rgb(160, 163, 167);
+    background-color: #F4FAFF;
+    
 }
 
 .main-section header {
-    font-size: 120%;
-    font-weight: bold;
+    font-size: 180%;
+    font-family: 'Dongle', sans-serif;
+    
+}
+
+.main-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80%;
+}
+
+.main-section code {
+    line-height: 16pt;
+}
+
+#Useful_Links_and_Sources li {
+    list-style-type: none;
+    padding-bottom: 8pt;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80%;
+}
+
+#Useful_Links_and_Sources ul {
+    padding-left: 0pt;
 }
 
 
+
 @media only screen and (max-width: 640px) {
-    #navbar {
+    .wrapper-div {
         display: block;
+    }
+
+    #header {
+        z-index: 10;
+        font-size: 20pt;
+        padding-top: 9pt;
+        
+    }
+
+    #navbar {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+        box-shadow: none;
+        z-index: 0;
+        font-size: 80%;
+    }
+
+    #navbar header, li {
+        text-align: center;
+    }
+
+    #main-doc {
+        position:static;
+        margin-left: 0px;
+        margin-top: -12px;
+        padding: 15px 15px 15px 15px;
+    }
+
+    .main-section header {
+        text-align: center;
+        font-size: 150%;
+    }
+
+    .main-section code {
+        line-height: 14pt;
+    }
+
+    #Useful_Links_and_Sources li {
+        text-align: left;
     }
 }

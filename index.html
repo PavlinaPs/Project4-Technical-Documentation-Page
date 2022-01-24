@@ -39,7 +39,7 @@
             </section><hr>
             <section class="main-section" id="Position_Relative">
                 <header>Position Relative</header>
-                <p>Relative positioning changes the position of the HTML element relative to where it normally would be in document flow if the position is set to static. It is removed from normal document flow, but position in the document flow is still reserved.</p>
+                <p>Relative positioning changes the position of the HTML element relative to where it normally would be in document flow if the position is set to static. It is removed from normal document flow, but position in the document flow is still reserved. The offset does not affect the position of any other elements.</p>
                 <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.</p>
                 <code>
                     <pre>
@@ -53,8 +53,8 @@
             <section class="main-section" id="Position_Absolute">
                 <header>Position Absolute</header>
                 <p>An element positioned absolute is relative to the nearest positioned ancestor. If it has no positioned ancestors, it uses the document body, and moves along with page scrolling.</p>
-                <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It can overlap elements</p>
-                <p>Its final position is determined by the values of top, right, bottom, and left.</p>
+                <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It can overlap elements.</p>
+                <p>Its final position is determined by the values of top, right, bottom and left (the distances from the element’s edges to its corresponding containing block's edges).</p>
                 <code>
                     <pre>
                         #parent-container {
@@ -71,8 +71,8 @@
             <section class="main-section" id="Position_Fixed">
                 <header>Position Fixed</header>
                 <p>The element is removed from the normal document flow. No space is created for the element in the page layout.</p>
-                <p>Stays in the same place when scrolled, therefore fixed position is good for navigation bars.</p>
-                <p> Its final position is determined by the values of top, right, bottom, and left.</p>
+                <p>It is positioned relative to the viewport, stays in the same place when scrolled, therefore fixed position is good for navigation bars.</p>
+                <p>Its final position is determined by the values of top, right, bottom, and left.</p>
                 <code>
                     <pre>
                         #nav-bar {
@@ -83,6 +83,7 @@
                         }
                     </pre>
                 </code>
+                <p>If printed, a fixed element will be repeated on each printed page.</p><br>
             </section><hr>
             <section class="main-section" id="Position_Sticky">
                 <header>Position Sticky</header>

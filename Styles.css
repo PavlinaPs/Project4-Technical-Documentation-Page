@@ -105,6 +105,10 @@ html, body {
     padding-left: 0pt;
 }
 
+.code-block {
+    margin-left: 100px;
+}
+
 @media only screen and (max-width: 640px) {
     .wrapper-div {
         display: block;
@@ -129,6 +133,11 @@ html, body {
 
     #navbar header, li {
         text-align: center;
+        padding: 0 0 0 0;
+    }
+
+    #navbar a:link, a:visited {
+        padding: 10px 0 10px 0;
     }
 
     #main-doc {
@@ -145,9 +154,14 @@ html, body {
 
     .main-section code {
         line-height: 14pt;
+        text-align: center;
     }
 
     #Useful_Links_and_Sources li {
         text-align: left;
+    }
+
+    .code-block {
+        margin-left: 60px;
     }
 }

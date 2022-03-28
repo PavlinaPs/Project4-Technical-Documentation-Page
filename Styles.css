@@ -5,12 +5,17 @@
 html, body {
     margin: 0;
     height: 100%;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .wrapper-div {
     display: flex;
     flex-direction: column;
     height: 100%;
+    border-left: 1px solid lightseagreen;
+    border-right: 1px solid lightseagreen;
 }
 
 #header {
